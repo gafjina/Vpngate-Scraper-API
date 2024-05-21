@@ -16,7 +16,7 @@ const generateReadme = (vpnList) => {
     content += `## Available Servers\n\n`;
     content += `Below is the list of available VPN servers:\n\n`;
 
-    content += "| Hostname | IP Address | Ping | Speed | Country |  | Time | OpenVPN Config |\n";
+    content += "| Hostname | IP Address | Ping | Speed | Country | Time | OpenVPN Config |\n";
     content += "|----------|------------|-------|-------|---------|-------|----------------|\n";
     vpnList.servers.forEach((server, index) => {
         let speedInMbps = (server.speed / 10000000).toFixed(2); // Convert to Mbps and round to two decimal places
