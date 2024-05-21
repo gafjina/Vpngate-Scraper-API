@@ -20,7 +20,7 @@ const generateReadme = (vpnList) => {
     content += "|----------|------------|-------|-------|---------|-------|----------------|\n";
     vpnList.servers.forEach((server, index) => {
         let speedInMbps = (server.speed / 10000000).toFixed(2); // Convert to Mbps and round to two decimal places
-        content += `| ${server.hostname} | ${server.ip} | ${server.ping} | ${speedInMbps} Mbps | ${server.countrylong} | [Download 📥](./configs/server_${index}_${server.countryshort}.ovpn) |\n`;
+        content += `| ${server.hostname} | ${server.ip} | ${server.ping} | ${speedInMbps} Mbps | ${server.countrylong} | ${server.uptime} | [Download 📥](./configs/server_${index}_${server.countryshort}.ovpn) |\n`;
     });
 
     content += `\n\n### Note: Please respect the terms of use for each VPN.\n\n`;
